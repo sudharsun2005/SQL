@@ -108,3 +108,50 @@ alter table Customers drop column pan;
 alter table Customers modify column pan1 varchar(50);
 
 
+INSERT INTO Customers
+(CustomerID, FirstName, LastName, Email, Phone, DateOfBirth)
+VALUES
+(001,'sudhar','Sun','sudharsun@gmail.com','9876543210','1998-04-15');
+
+
+select * from Customers;
+
+INSERT INTO Accounts
+(AccountID, CustomerID, AccountType, Balance)
+VALUES
+(201,001,'Savings',500000); 
+
+INSERT INTO Customers
+(CustomerID, FirstName, LastName, Email, Phone, DateOfBirth)
+VALUES
+(002,'sharn','raj','sharan@gmail.com','9876543550','1998-06-15');
+
+INSERT INTO Accounts
+(AccountID, CustomerID, AccountType, Balance)
+VALUES
+(202,002,'Current',10000); 
+
+
+select * from Accounts;
+
+create database Learners;
+
+use Learners;
+
+-- Table Creation - Learner
+create table Learner(id int ,sname varchar(20));
+
+desc Learner;
+
+insert into Learner values(1,'PRAVEEN');
+insert into Learner values(2,'HARSHAD'),(3,'SHARAN');
+
+select * from Learner;
+
+delete from Learner;
+
+alter table Learner add Gender char(1) after id;
+
+update Learner set Gender='M';
+
+
